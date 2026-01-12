@@ -8,5 +8,116 @@
     </head>
     <body>
         
+        <main>
+            <!--PELICULAS-->
+            <section class="seccionPeliculas">
+                <div class="tipoCantidad">
+                    <label class="campoTipo">
+                        <select id="tipoEntrada" name="tipoEntrada">
+                        <option value="">-- Seleccione tipo de entrada --</option>
+                        <option value="General">Entrada General (9€)</option>
+                        <option value="Senior">Mayores 65 (3€)</option>
+                        <option value="joven/numerosa">Carnet Joven/Familia numerosa (7.5€)</option>
+                        </select>
+                    </label>
+                    <label class="campoCant">
+                        <input id="cant" name="cant" type="number" min="0" />
+                    </label>
+                </div>
+                <div class="listaPelis">
+                    <h1>Interstellar</h1>
+                    <div class="peli1">
+                        <img src="imagenes/interstellar.avif" />
+                        <p>Un grupo de científicos y exploradores, encabezados por Cooper, 
+                            se embarcan en un viaje espacial para encontrar un lugar con las 
+                            condiciones necesarias para reemplazar a la Tierra y comenzar una 
+                            nueva vida allí. La Tierra está llegando a su fin y este grupo necesita 
+                            encontrar un planeta más allá de nuestra galaxia que garantice el futuro 
+                            de la raza humana.
+                        </p>
+                        <div class="botoneraPeli1">
+                            <button id="peli1Sesion1" type="button">18:30</button>
+                            <button id="peli1Sesion2" type="button">22:45</button>
+                        </div>
+                    </div>
+                    <h1>Como entrenar a tu dragon</h1>
+                    <div class="peli2">
+                        <div class="botoneraPeli2">
+                            <button id="peli2Sesion1" type="button">18:30</button>
+                            <button id="peli2Sesion2" type="button">22:45</button>
+                        </div>
+                        <p>Hipo, un vikingo adolescente, comienza las clases de entrenamiento con dragones,
+                             y ve por fin una oportunidad para demostrar que es capaz de convertirse en
+                              guerrero, cuando hace amistad con un dragón herido.
+                        </p>
+                        <img src="imagenes/HTTYD.jpg" />
+                    </div>
+                    <h1>Wicked for good</h1>
+                    <div class="peli3">
+                        <img src="imagenes/Wicked.jpg" />
+                        <p>Comienza el épico final de la historia jamás contada de las brujas de Oz.
+                             Elphaba, demonizada como la Bruja Malvada del Oeste, vive exiliada y
+                              luchando por la verdad. Glinda, símbolo de bondad, reina en la Ciudad Esmeralda.
+                        </p>
+                        <div class="botoneraPeli3">
+                            <button id="peli3Sesion1" type="button">18:30</button>
+                            <button id="peli3Sesion2" type="button">22:45</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--FORMULARIO-->
+            <section class="seccionFormulario">
+                <h1 id="titulo">Datos compra</h1>
+
+                <p id="status" aria-live="polite"></p>
+
+                <form id="formCine">
+                <label>
+                    Nombre y apellidos
+                    <input id="nombre" name="nombre" type="text" autocomplete="name" />
+                </label>
+                <small class="msg" id="msgNombre"></small>
+
+                <small class="msg" id="msgEdad"></small>
+
+                <label>
+                    Email
+                    <input id="email" name="email" type="email" autocomplete="email" />
+                </label>
+                <small class="msg" id="msgEmail"></small>
+                
+                <div class="entradas">
+                    <div class="campo peli">
+                        Pelicula
+                        <input id="peliculaSelec" name="peliculaSelec" type="text" readonly />
+                    </div>
+                    <div class="campo sesion">
+                        Sesion
+                        <input id="sesionSelec" name="SesionSelec" type="text" readonly />
+                    </div>
+                    <div class="campo tipo">
+                        Tipo de entrada
+                        <input id="tipoSelec" name="tipoSelec" type="text" readonly  />
+                    </div>
+                    <div class="campo cantidad">
+                        Cantidad
+                        <input id="cantidadSelec" name="cantidadSelec" type="text" readonly  />
+                    </div>
+
+                </div>
+
+                <label class="fila">
+                    Acepto condiciones
+                    <input id="acepto" type="checkbox" />
+                </label>
+                <small class="msg" id="msgAcepto"></small>
+                <div class="botonera">
+                    <button id="btnEnviar" type="button">Proceder al pago</button>
+                </div>
+                </form>
+        </main>
+        
     </body>
 </html>
