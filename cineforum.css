@@ -1,103 +1,158 @@
 :root {
-     font-family: system-ui, Arial, sans-serif;
-    }
-body { 
-    margin: 0; 
-    background: #f6f7fb; 
-    padding: 24px; 
-    }
-.seccionPeliculas{
-    max-width: 80%; 
-    margin: 0 auto; 
-    background: rgb(255, 255, 255);
-    padding: 18px; 
-    border-radius: 14px;
-    border: 1px solid #e6e6ee; 
+    font-family: system-ui, Arial, sans-serif;
 }
-.tipoCantidad{
+
+body {
+    margin: 0;
+    background: #f6f7fb;
+    padding: 24px;
+}
+
+.seccionPeliculas {
+    max-width: 80%;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid #e6e6ee;
+}
+
+.tipoCantidad {
     display: flex;
     flex-direction: row;
 }
-.tipoCantidad .campoTipo{flex: 5;}
-.tipoCantidad .campoCant{flex: 1;}
-.listaPelis{
+
+.tipoCantidad .campoTipo {
+    flex: 5;
+}
+
+.tipoCantidad .campoCant {
+    flex: 1;
+}
+
+.listaPelis {
     display: flex;
     flex-direction: column;
 }
-.peli1, .peli2, .peli3{
+
+.peli1,
+.peli2,
+.peli3 {
     display: flex;
     flex-direction: row;
 }
-.peli1 img, .peli3 img, .peli2 img{flex:5}
-.peli1 p, .peli3 p, .peli2 p{flex:3}
-.peli1 .botoneraPeli1, .peli3 .botoneraPeli3, .peli2 .botoneraPeli2{flex:2}
-img{
+
+.peli1 img,
+.peli3 img,
+.peli2 img {
+    flex: 5
+}
+
+.peli1 p,
+.peli3 p,
+.peli2 p {
+    flex: 3
+}
+
+.peli1 .botoneraPeli1,
+.peli3 .botoneraPeli3,
+.peli2 .botoneraPeli2 {
+    flex: 2
+}
+
+img {
     width: 300px;
     height: 300px;
 }
-.seccionFormulario { 
+
+.seccionFormulario {
     text-align: center;
-    max-width: 40%; 
-    margin: 0 auto; 
+    max-width: 40%;
+    margin: 0 auto;
     background: rgb(255, 255, 255);
-    padding: 18px; 
+    padding: 18px;
     border-radius: 14px;
-    border: 1px solid #e6e6ee; 
-    }
-.entradas{
+    border: 1px solid #e6e6ee;
+}
+
+.entradas {
     display: flex;
     gap: 10px;
 }
-.campo{
+
+.campo {
     display: flex;
     flex-direction: column;
 }
-.campo.peli{flex:4;}
-.campo.sesion{flex: 1;}
-.campo.tipo{flex: 3;}
-.campo.cantidad{flex: 1;}
-label { 
+
+.campo.peli {
+    flex: 4;
+}
+
+.campo.sesion {
+    flex: 1;
+}
+
+.campo.tipo {
+    flex: 3;
+}
+
+.campo.cantidad {
+    flex: 1;
+}
+
+label {
     display: block;
-    margin: 12px 0; 
-    }
-input, select, textarea { 
+    margin: 12px 0;
+}
+
+input,
+select,
+textarea {
     width: 100%;
     padding: 10px;
-    border-radius: 10px; 
-    border: 1px solid #d7d7e6; 
-    box-sizing: border-box; 
-    }
-button{
+    border-radius: 10px;
+    border: 1px solid #d7d7e6;
+    box-sizing: border-box;
+}
+
+button {
     width: 25%;
     padding: 10px;
-    border-radius: 10px; 
-    border: 1px solid #d7d7e6; 
-    box-sizing: border-box; 
+    border-radius: 10px;
+    border: 1px solid #d7d7e6;
+    box-sizing: border-box;
 }
-.fila { 
-    display: inline-block;
-    align-items: normal; 
-    justify-content: center; 
-    gap: 10px; 
-    }
-.h2 { 
-    margin-top: 18px; 
-    }
 
-.msg { 
-    display: inline-block ; 
-    min-height: 18px; 
-    font-size: 12px; 
-    }
-.campo-error { 
-    border-color: #ff6b6b; 
-    }
-.campo-ok { 
-    border-color: #33c481; 
-    }
-.msg-error { 
-    color: #d62323; 
-    }
-.msg-ok { 
-    color: #0c7a3c; 
-    }
+.fila {
+    display: inline-block;
+    align-items: normal;
+    justify-content: center;
+    gap: 10px;
+}
+
+.h2 {
+    margin-top: 18px;
+}
+
+.msg {
+    display: inline-block;
+    min-height: 18px;
+    font-size: 12px;
+}
+
+.campo-error {
+    border-color: #ff6b6b;
+}
+
+.campo-ok {
+    border-color: #33c481;
+}
+
+.msg-error {
+    color: #d62323;
+}
+
+.msg-ok {
+    color: #0c7a3c;
+}
