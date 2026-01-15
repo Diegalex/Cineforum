@@ -4,6 +4,8 @@ const correo = document.getElementById("email");
 const tipoEntrada = document.getElementById("tipoEntrada");
 const cantidad = document.getElementById("cant");
 const aceptarCondiciones = document.getElementById("acepto");
+const btGuardar=document.getElementById("btnGuardar");
+btnRestaurar=document.getElementById("btnRestaurar");
 
 let sesionSeleccionada = null; //para luego form
 
@@ -235,12 +237,34 @@ function actualizarResumen() {
 
 }
 
+function guardarDatos() {
+  localStorage.setItem("nombreGuardado", nombre.value);
+  localStorage.setItem("correoGuardado", correo.value);
+  alert("Datos guardados correctamente");
+}
+
+function restaurarDatos() {
+  const nombreGuardado = localStorage.getItem("nombreGuardado");
+  const correoGuardado = localStorage.getItem("correoGuardado");
+
+  if (nombreGuardado) nombre.value = nombreGuardado;
+  if (correoGuardado) correo.value = correoGuardado;
+
+  // Revalidamos visualmente
+  validarNombre();
+  validarEmail();
+}
+
+
 // Event listeners de los campos del formulario para que al cambiar cualquier cosa despues de ser generado el resumen, este se borre nuevamente
 nombre.addEventListener("input", actualizarResumen);
 correo.addEventListener("input", actualizarResumen);
 tipoEntrada.addEventListener("change", actualizarResumen);
 cantidad.addEventListener("change", actualizarResumen);
 aceptarCondiciones.addEventListener("change", actualizarResumen);
+btGuardar.addEventListener("click", guardarDatos);
+btnRestaurar.addEventListener("click", restaurarDatos);
+
 
 
 
