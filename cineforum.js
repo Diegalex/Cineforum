@@ -247,80 +247,36 @@ aceptarCondiciones.addEventListener("change", actualizarResumen);
 //Comprobar e ir tachando
 /*
 REQUISITOS 
- FORMULARIO (HTML) debe contener al menos:
-
-Un campo de texto
-Un campo numérico
-Un campo de tipo email
-Un elemento select
-Un grupo de checkbox o radio
-Un textarea
-Un botón de envío
-Todos los campos deben tener su id y name
+FORMULARIO (HTML) debe contener al menos:
+Un textarea (POR HACER)
  
 
-INTERACTIVIDAD (JAVASCRIPT)
-
-Usar addEventListener con, al menos, los siguientes eventos:
-
-input
-change
-click
-submit
-
-El envío del formulario debe controlarse con preventDefault.
-
-VALIDACIONES Y EXPERIENCIA DE USUARIO
- 
-
+VALIDACIONES Y EXPERIENCIA DE USUARIO (KINDA HECHO)
 Validar: 
+Rango correcto en un campo numérico (kindof), en la funcion validarFormularioEntero crea alerta si la cantidad es de 0 o menor
 
-Longitud mínima de un campo de texto
-Rango correcto en un campo numérico
-Email válido
-Select obligatorio
-Al menos un checkbox marcado
- 
-Cuando un campo no sea válido, debe mostrarse un mensaje de error. El campo debe cambiar visualmente (color, borde, etc.)
-
-No se deben usar alert como sistema principal de validación.
-
-CREACIÓN Y ELIMINACIÓN DINÁMICA DE ELEMENTOS (DOM)
- 
-
+CREACIÓN Y ELIMINACIÓN DINÁMICA DE ELEMENTOS (DOM) (KINDA HECHO)
+(TECNICAMENTE SE EDITAN ELEMENTOS DEL DOM, LO QUE ES SIMILAR)
 La aplicación debe  crear elementos dinámicamente (createElement, appendChild), y eliminar elementos del DOM (remove o removeChild)
- 
-
 Ejemplos: 
-
 Añadir opciones a un select
 Añadir o eliminar bloques o filas
 Eliminar elementos incorrectos
  
 
-BOTONES Y USO DEL BOM
- 
-
+BOTONES Y USO DEL BOM  (PENDIENTE)
 Incluir al menos dos botones que utilicen funcionalidades del navegador, por ejemplo: 
-
 Guardar datos (localStorage)
 Restaurar datos
 Recargar la página (location.reload)
 Imprimir (window.print)
- 
- MINI-COMPONENTES (FUNCIONES PROPIAS)
- Debes crear al menos dos funciones reutilizables propias, por ejemplo:
-Una función que valide un campo
-Una función que cree un elemento del DOM
-Una función que muestre mensaje
-Estas funciones deben usarse más de una vez en el código.
 
-MÉTODOS O FUNCIONES NUEVAS
+MÉTODOS O FUNCIONES NUEVAS (HECHO)
 Utilizar al menos tres métodos o propiedades que no se hayan explicado directamente en clase, por ejemplo: 
 
-closest
-dataset
-classList.toggle
+closest (USADO)
+dataset (USADO)
+classList.toggle (USADO)
 insertAdjacentHTML
 localStorage
 navigator.onLine
