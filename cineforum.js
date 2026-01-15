@@ -40,40 +40,72 @@ function setCantidadEntradas() {
 
 document.getElementById("cant").addEventListener("change", setCantidadEntradas);
 
-//comprueba segun se va escribiendo el nombre e email si son validos te lo pone en verde, en caso contrario pone en rojo
-nombre.addEventListener("input", function(){
-    const nombreValor= nombre.value
-    if(nombreValor.length<4||!nombreValor.includes(" ")){
+//comprueba segun se va escribiendo el nombre si son validos te lo pone en verde, en caso contrario pone en rojo
+function validarNombre(){
+    const nombreValor= nombre.value.trim() //trim del input del usuario 
+    
+    //^ -> inicio de cadena .+ -> uno o más caracteres Unicode de cualquier tipo
+    //  \s -> espacio .+ -> (1,n) Unicode
+    // $ -> fin cadena /u -> flag Unicode
+    const regexNombre = /^.+\s.+$/u; //https://www.w3schools.com/js/js_regexp.asp
+
+    if(nombreValor.length<4||!regexNombre.test(nombreValor)){
         nombre.classList.add("msg-error");
         nombre.classList.add("campo-error")
         nombre.classList.remove("msg-ok")
         nombre.classList.remove("campo-ok")
+        return true;
     } 
+
     else{
         nombre.classList.add("msg-ok");
         nombre.classList.add("campo-ok");
         nombre.classList.remove("msg-error")
         nombre.classList.remove("campo-error")
     } 
-})
- 
-//faltaria añadir alguna condicion mas en el coreo que no se me ocurre
-correo.addEventListener("input", function(){
-    const correoValor= correo.value
-    if(!correoValor.includes("@")){
-        correo.classList.add("msg-error");
-        correo.classList.add("campo-error");
-        correo.classList.remove("msg-ok")
-        correo.classList.remove("campo-ok")
-    } 
-    else{
-        correo.classList.add("msg-ok");
-        correo.classList.add("campo-ok");
-        correo.classList.remove("msg-error")
-        correo.classList.remove("campo-error")
-    } 
-})
 
+    return false;
+}
+
+nombre.addEventListener("input",validarNombre);
+
+//Función que valida el email dividiendolo en un array para realizar las comprobaciones
+function validarEmail(){
+
+    let correoValido = false; //init
+    
+    const correoValor= correo.value;
+    const arrayCorreo = correoValor.split("@"); //Split en array con dos partes tras la @
+
+    let user = "";
+    let dominio = "";
+
+    //aseguramos que tenemos dos objetos en el array
+    if (arrayCorreo.length === 2){
+        user = arrayCorreo[0]; //antes de @ -> user
+        dominio = arrayCorreo[1]; //dominio despues de @
+    }
+
+    //campo de usuario con al menos un caracter
+    //Dominio incluye ".", y hacemos split para comprobar que a cada lado del punto hay al menos un caracter
+    //.every realiza comprobaciones, en este caso de longitud, entre cada objeto devuelto al suprimir el punto, comprobando que a ambos lados haya al menos un caracter
+    if(user.length > 0 &&  dominio.includes(".") && 
+        dominio.split(".").every(d => d.length > 0)){
+            correoValido = true;
+        }
+
+    if (!correoValido) {
+        correo.classList.add("msg-error", "campo-error");
+        correo.classList.remove("msg-ok", "campo-ok");
+    } else {
+        correo.classList.add("msg-ok", "campo-ok");
+        correo.classList.remove("msg-error", "campo-error");
+    }
+
+    return correoValido;
+}
+
+correo.addEventListener("input",validarEmail);
 
 formulario.addEventListener("submit", function (e) {
     //TODO
