@@ -18,7 +18,7 @@
                         <option value="">-- Seleccione tipo de entrada --</option>
                         <option value="General">Entrada General (9€)</option>
                         <option value="Senior">Mayores 65 (3€)</option>
-                        <option value="joven/numerosa">Carnet Joven/Familia numerosa (7.5€)</option>
+                        <option value="Joven/Numerosa">Carnet Joven/Familia numerosa (7.5€)</option>
                     </select>
                 </label>
                 <label class="campoCant">
@@ -116,17 +116,32 @@
                     </div>
 
                 </div>
-
+                
                 <label class="fila">
                     Acepto condiciones
                     <input id="acepto" type="checkbox" />
                 </label>
+                <br/>
                 <small class="msg" id="msgAcepto"></small>
+                <br/>
                 <div class="botonera">
                     <button id="btnEnviar" type="submit">Proceder al pago</button>
                 </div>
             </form>
     </main>
+    <footer>
+    <!-- Se insertan elementos del DOM aquí mediante JS -->
+    <div id="resumenEntradas" style="display:none">
+        <div class="tarjetaResumen">
+            <h2>Resumen de la compra</h2>
+            <p><strong>Pelicula:</strong> <span id="resumenPelicula">peli</span></p>
+            <p><strong>Sesión:</strong> <span id="resumenSesion">sesionPeli</span></p>
+            <p><strong>Tipo de entrada:</strong> <span id="resumenTipo">tipoPeli</span></p>
+            <p><strong>Cantidad:</strong> <span id="resumenCantidad">CantidadEntradas</span></p>
+            <p><strong>Total a pagar:</strong> <span id="resumenTotal">Total</span></p>
+        </div>
+    </div>
+</footer>
     <script type="text/javascript" src="cineforum.js"></script>
 </body>
 
