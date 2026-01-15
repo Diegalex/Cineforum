@@ -73,7 +73,7 @@ nombre.addEventListener("input",validarNombre);
 function validarEmail(){
 
     let correoValido = false; //init
-    
+
     const correoValor= correo.value;
     const arrayCorreo = correoValor.split("@"); //Split en array con dos partes tras la @
 
@@ -169,6 +169,91 @@ for (let i = 0; i < botonesSesion.length; i++) {
 
 //TODO:
 
-// DOM/DOM -> Resumen Entradas
+    // Extraer funciones definidas en la definicion de los eventos a funciones globales para poder realizar nuevamente las comprobaciones en el submit.
+    // DOM/DOM -> Resumen Entradas
+    // Añadir métodos no vistos en clase
+//
 
-// Añadir métodos no vistos en clase
+//Comprobar e ir tachando
+/*
+REQUISITOS 
+ FORMULARIO (HTML) debe contener al menos:
+
+Un campo de texto
+Un campo numérico
+Un campo de tipo email
+Un elemento select
+Un grupo de checkbox o radio
+Un textarea
+Un botón de envío
+Todos los campos deben tener su id y name
+ 
+
+INTERACTIVIDAD (JAVASCRIPT)
+
+Usar addEventListener con, al menos, los siguientes eventos:
+
+input
+change
+click
+submit
+
+El envío del formulario debe controlarse con preventDefault.
+
+VALIDACIONES Y EXPERIENCIA DE USUARIO
+ 
+
+Validar: 
+
+Longitud mínima de un campo de texto
+Rango correcto en un campo numérico
+Email válido
+Select obligatorio
+Al menos un checkbox marcado
+ 
+Cuando un campo no sea válido, debe mostrarse un mensaje de error. El campo debe cambiar visualmente (color, borde, etc.)
+
+No se deben usar alert como sistema principal de validación.
+
+CREACIÓN Y ELIMINACIÓN DINÁMICA DE ELEMENTOS (DOM)
+ 
+
+La aplicación debe  crear elementos dinámicamente (createElement, appendChild), y eliminar elementos del DOM (remove o removeChild)
+ 
+
+Ejemplos: 
+
+Añadir opciones a un select
+Añadir o eliminar bloques o filas
+Eliminar elementos incorrectos
+ 
+
+BOTONES Y USO DEL BOM
+ 
+
+Incluir al menos dos botones que utilicen funcionalidades del navegador, por ejemplo: 
+
+Guardar datos (localStorage)
+Restaurar datos
+Recargar la página (location.reload)
+Imprimir (window.print)
+ 
+ MINI-COMPONENTES (FUNCIONES PROPIAS)
+ Debes crear al menos dos funciones reutilizables propias, por ejemplo:
+Una función que valide un campo
+Una función que cree un elemento del DOM
+Una función que muestre mensaje
+Estas funciones deben usarse más de una vez en el código.
+
+MÉTODOS O FUNCIONES NUEVAS
+Utilizar al menos tres métodos o propiedades que no se hayan explicado directamente en clase, por ejemplo: 
+
+closest
+dataset
+classList.toggle
+insertAdjacentHTML
+localStorage
+navigator.onLine
+ 
+No es necesario que sean complicados, pero sí saber para qué sirven.
+*/
