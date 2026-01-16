@@ -35,7 +35,7 @@ function seleccionarSesion(card) {
         tarjetas[i].classList.remove('active'); //le quita la clase active que es la que da la funcionalidad de como si fuera boton
     }
 
-    card.classList.add('active'); //se añade la clase active a la clickada
+    card.classList.toggle('active'); //se añade la clase active a la clickada
 
     //Closest -> Obtiene el contenedor padre mas cercano de dentro de los parametros
     let peli = card.closest('.peli1, .peli2, .peli3').querySelector('h1').textContent;
@@ -264,46 +264,3 @@ cantidad.addEventListener("change", actualizarResumen);
 aceptarCondiciones.addEventListener("change", actualizarResumen);
 btGuardar.addEventListener("click", guardarDatos);
 btnRestaurar.addEventListener("click", restaurarDatos);
-
-
-
-
-//Comprobar e ir tachando
-/*
-REQUISITOS 
-FORMULARIO (HTML) debe contener al menos:
-Un textarea (POR HACER)
- 
-
-VALIDACIONES Y EXPERIENCIA DE USUARIO (KINDA HECHO)
-Validar: 
-Rango correcto en un campo numérico (kindof), en la funcion validarFormularioEntero crea alerta si la cantidad es de 0 o menor
-
-CREACIÓN Y ELIMINACIÓN DINÁMICA DE ELEMENTOS (DOM) (KINDA HECHO)
-(TECNICAMENTE SE EDITAN ELEMENTOS DEL DOM, LO QUE ES SIMILAR)
-La aplicación debe  crear elementos dinámicamente (createElement, appendChild), y eliminar elementos del DOM (remove o removeChild)
-Ejemplos: 
-Añadir opciones a un select
-Añadir o eliminar bloques o filas
-Eliminar elementos incorrectos
- 
-
-BOTONES Y USO DEL BOM  (PENDIENTE)
-Incluir al menos dos botones que utilicen funcionalidades del navegador, por ejemplo: 
-Guardar datos (localStorage)
-Restaurar datos
-Recargar la página (location.reload)
-Imprimir (window.print)
-
-MÉTODOS O FUNCIONES NUEVAS (HECHO)
-Utilizar al menos tres métodos o propiedades que no se hayan explicado directamente en clase, por ejemplo: 
-
-closest (USADO)
-dataset (USADO)
-classList.toggle (USADO)
-insertAdjacentHTML
-localStorage
-navigator.onLine
- 
-No es necesario que sean complicados, pero sí saber para qué sirven.
-*/
